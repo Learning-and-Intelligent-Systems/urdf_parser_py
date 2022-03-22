@@ -129,6 +129,7 @@ xmlr.reflect(Material, tag='material', params=[
         
 class Box(xmlr.Object):
     def __init__(self, size=None):
+        self.type = 'box'
         self.size = size
 
 
@@ -139,6 +140,7 @@ xmlr.reflect(Box, tag='box', params=[
 
 class Cylinder(xmlr.Object):
     def __init__(self, radius=0.0, length=0.0):
+        self.type = 'cylinder'
         self.radius = radius
         self.length = length
 
@@ -151,6 +153,7 @@ xmlr.reflect(Cylinder, tag='cylinder', params=[
 
 class Sphere(xmlr.Object):
     def __init__(self, radius=0.0):
+        self.type = 'sphere'
         self.radius = radius
 
 
@@ -161,6 +164,7 @@ xmlr.reflect(Sphere, tag='sphere', params=[
 
 class Mesh(xmlr.Object):
     def __init__(self, uri=None, scale=None):
+        self.type = 'mesh'
         self.uri = uri
         self.scale = scale
 
